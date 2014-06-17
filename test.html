@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+
+    function animal(name, age) {
+        this.name = name;
+        this.age = age;
+        this.tip = function () {
+            alert("gogogo");
+        }
+    }
+    function dog(name, age) {
+        this.hsp = animal;
+        this.hsp(name, age);
+    }
+//    alert("你好");
+//    var Dog = new dog("Tidy", 20);
+//    //    alert(dog.name+dog.age);
+//    Dog.tip();
+    console.log("here");
+</script>
+
+</body>
+</html>

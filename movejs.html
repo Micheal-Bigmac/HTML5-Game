@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>小球上下移动</title>
+</head>
+<body onkeydown="go()">
+<canvas id="test" width="500" height="500" style="background-color: black"></canvas>
+<script type="text/javascript" src="TankGame.js"></script>
+<script type="text/javascript">
+    var canvas1 = document.getElementById("test");
+    var cxt = canvas1.getContext("2d");
+
+    function drawball() {
+        cxt.beginPath();
+        cxt.fillStyle = "#FF0000";
+        cxt.arc(ballx, bally, 20, 0, 360, true);
+        cxt.closePath();
+        cxt.fill();
+    }
+    drawball();
+    function go() {
+        var keycode = event.keyCode;
+        cxt.clearRect(0, 0, 500, 500);
+        switch (keycode) {
+            case 87:
+                bally -= 3;
+                break;
+            case 68:
+                ballx += 3;
+                break;
+            case 83:
+                bally += 3;
+                break;
+            case 65:
+                ballx -= 3;
+                break;
+        }
+        drawball();
+    }
+</script>
+</body>
+</html>
